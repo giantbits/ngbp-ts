@@ -1,12 +1,13 @@
 {
-  "name": "ng-boilerplate",
-  "version": "0.3.2",
+  "name": "ngbp-ts",
+  "version": "0.0.2",
   "devDependencies": {
-    "angular": "~1.2",
-    "angular-mocks": "~1.2",
-    "bootstrap": "~3.1",
-    "angular-bootstrap": "~0.10.0",
-    "angular-ui-router": "~0.2"
+    "angular": "angularjs#~1.4.4",
+    "angular-bootstrap": "~0.13.3",
+    "angular-mocks": "~1.4.4",
+    "angular-ui-router": "~0.2.15",
+    "bootstrap": "~3.3.5",
+    "underscore": "~1.8.3"
   },
   "dependencies": {}
 }

@@ -1,0 +1,31 @@
+<section id="todoapp" ng-controller="TodoCtrl">
+
+    <header id="header">
+        <h1>todos</h1>
+        <form id="todo-form" ng-submit="vm.addTodo()">
+            <input id="new-todo" placeholder="What needs to be done?" ng-model="vm.newTodo" autofocus>
+        </form>
+    </header>
+
+    <section id="main" ng-show="vm.todos.length" ng-cloak>
+        <progressbar progress="vm.completedCount/vm.todos.length * 100"></progressbar>
+        <input id="toggle-all" type="checkbox" ng-model="vm.allChecked" ng-click="vm.markAll(vm.allChecked)">
+        <ul id="todo-list">
+            <li ng-repeat="todo in vm.todos" ng-class="{completed: todo.completed, editing: todo == vm.editedTodo}">
+                <div class="view">
+                    <input class="toggle" type="checkbox" ng-model="todo.completed">
+                    <label ng-dblclick="vm.editTodo(todo)">{{todo.title}}</label>
+                    <button class="destroy" ng-click="vm.removeTodo(todo)"></button>
+                </div>
+                <form ng-submit="vm.doneEditing(todo)">
+                    <input class="edit" ng-model="todo.title" todo-escape="vm.revertEditing(todo)" todo-blur="vm.doneEditing(todo)" todo-focus="todo == vm.editedTodo">
+                </form>
+            </li>
+        </ul>
+    </section>
+
+    <footer id="footer" ng-show="vm.todos.length" ng-cloak>
+        <span id="todo-count"><strong>Remaining {{vm.remainingCount}}</strong></span>
+        <button id="clear-completed" ng-click="vm.clearCompletedTodos()" ng-show="vm.completedCount">Clear completed ({{vm.completedCount}})</button>
+    </footer>
+</section>

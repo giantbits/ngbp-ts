@@ -1,0 +1,1 @@
+ngbpTs.controller(Controllers);
