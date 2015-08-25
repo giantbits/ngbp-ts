@@ -14,14 +14,15 @@ Install Node.js and then:
 
 ```sh
 $ git clone git://github.com/sgudis/ngbp-ts
-$ cd ng-boilerplate
-$ sudo npm -g install grunt-cli karma bower
-$ npm install
-$ npm install tsd -g (sudo @ unix) // Optional if tsd is not installed correctly.
+$ cd ngbp-ts
+$ sudo npm install grunt-cli karma bower
+$ (sudo) npm install
 $ bower install
 $ grunt tsdrefresh // Use this to get the latest DefinitelyTyped definitions.
-$ grunt
+$ grunt build compile
 ```
+
+After that you'll have a *build* and a *bin* folder with the compiled JS and the uglified release version under *bin*.
 
 ***
 
