@@ -1,8 +1,16 @@
 {
   "name": "ngbp-ts",
   "description": "ngBoilerplate using TypeScript (with tsd).",
-  "license": "MIT",
+  "license": {
+    "type": "MIT",
+    "url": "https://raw.github.com/sgudis/ngbp-ts/master/LICENSE"
+   },
   "version": "0.0.2",
+  "bugs": "https://github.com/sgudis/ngbp-ts/issues",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:sgudis/ngbp-ts.git"
+  },
   "devDependencies": {
     "bower": "^1.5.1",
     "coffeelint": "^1.11.1",
