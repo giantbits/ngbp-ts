@@ -4,7 +4,8 @@ Based on the great work https://github.com/ngbp/ngbp and also including https://
 
 Work in progress!
 
-Currently only "build" and "compile" tasks are working - no "watch"!
+Currently there is a problem with *grunt watch* that forced me to raise the number of watched files:
+```echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p```
 
 ***
 

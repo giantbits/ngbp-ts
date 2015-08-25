@@ -242,7 +242,7 @@ module.exports = function ( grunt ) {
             html: ['app/**/**.tpl.html'],       // The source html files, https://github.com/basarat/grunt-ts#html-2-typescript-support
             reference: 'src/app/reference.ts',      // If specified, generate this file that you can use for your reference management
             out: '<%= build_dir %>/src/app.js',                  // If specified, generate an out.js file which is the merged js file
-            watch: 'app',                       // If specified, watches this directory for changes, and re-runs the current target
+            //watch: 'app',                       // If specified, watches this directory for changes, and re-runs the current target
             options: {                          // use to override the default options, http://gruntjs.com/configuring-tasks#options
                 module: 'amd'
             },
@@ -561,6 +561,14 @@ module.exports = function ( grunt ) {
       less: {
         files: [ 'src/**/*.less' ],
         tasks: [ 'less:build' ]
+      },
+
+      /**
+       * When the tsfiles change, we need to compile them.
+       */
+      ts:{
+        files: [ '<%= app_files.ts %>' ],
+        tasks: [ 'ts:build' ]
       },
 
       /**
